@@ -1,0 +1,14 @@
+print("Hello World")
+print('Hello World 2')
+
+name = 'rahman'
+print(name,'this is me')
+print(name+' is boy')
+print(name.upper())
+print(name.lower())
+print(name.isupper())
+print(name.islower())
+print(name.upper().isupper())
+print(len(name))
+print(name.index('a'))
+print(name.replace('a','b'))
