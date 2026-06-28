@@ -20,3 +20,4 @@ print(round(5.4))
 print(bin(456))
 
 print(sqrt(100))
+print(type(a))
