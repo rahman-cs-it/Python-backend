@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%(=6)sucgle-)e$9!q9%*!y+_9&9fxl0p6&)z_^c_h04ju6gsh'
+SECRET_KEY = 'django-insecure-=p=zh_w&60yhc#!63_tfbhwks042c$$sds8qc2c^*8h+$ba-(z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -34,12 +34,15 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'playground',
+    "debug_toolbar",
 ]
 
 MIDDLEWARE = [
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -98,6 +101,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
